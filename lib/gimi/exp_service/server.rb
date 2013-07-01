@@ -62,9 +62,31 @@ module GIMI::ExperimentService
       pB = OMF::SFA::Resource::Project.create(:name => 'projectB')
 
       require 'gimi/resource/experiment'
-      e1 = GIMI::Resource::Experiment.create(:name => 'exp1', :project => pA)
-      e1.iticket = GIMI::Resource::ITicket.create()
+      e1 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp1-2013-06-26T20:43:30', :project => pA)
+      e1.iticket = GIMI::Resource::ITicket.create(:token => 'NKOJJDkMgTzehZx', :path => '/geniRenci/home/gimi01/gimi01-exp1-2013-06-26T20:43:30')
+      e1.slice = GIMI::Resource::Slice.create(:sliceID => 'urn:publicid:IDN+ch.geni.net:GREESC13+slice+dbhatfinal')
       e1.save
+      
+      debug "First ticket saved"
+      e2 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp2-2013-06-26T20:44:53', :project => pA)
+      e2.iticket = GIMI::Resource::ITicket.create(:token => '8wAA6t4OyRW7ilH', :path => '/geniRenci/home/gimi01/gimi01-exp2-2013-06-26T20:44:53')
+      e2.save
+      debug "Second ticket saved"
+      e3 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp3-2013-06-26T20:45:43', :project => pA)
+      e3.iticket = GIMI::Resource::ITicket.create(:token => 'PnQu8Fqv6y7QlGU', :path => '/geniRenci/home/gimi01/gimi01-exp3-2013-06-26T20:45:43')
+      e3.save
+     
+      e4 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp4-2013-06-26T20:47:18', :project => pB)
+      e4.iticket = GIMI::Resource::ITicket.create(:token => 'wQNzDDjn0FIA4yQ', :path => '/geniRenci/home/gimi01/gimi01-exp4-2013-06-26T20:47:18')
+      e4.save
+
+      e5 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp5-2013-06-26T20:48:18', :project => pB)
+      e5.iticket = GIMI::Resource::ITicket.create(:token => 'uYkZxeyv1Vo1AAF', :path => '/geniRenci/home/gimi01/gimi01-exp5-2013-06-26T20:48:18')
+      e5.save
+
+      e6 = GIMI::Resource::Experiment.create(:name => 'gimi01-exp6-2013-06-26T20:49:08', :project => pB)
+      e6.iticket = GIMI::Resource::ITicket.create(:token => 'xZrJMxUlWwdxlIl', :path => '/geniRenci/home/gimi01/gimi01-exp6-2013-06-26T20:49:08')
+      e6.save
 
       require 'omf-sfa/resource/user'
       u1 = OMF::SFA::Resource::User.create(:name => 'user1')
