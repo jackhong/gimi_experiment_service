@@ -8,6 +8,7 @@ module GIMI::Resource
   #
   class Experiment < OMF::SFA::Resource::OResource
     oproperty :iticket, GIMI::Resource::ITicket
+    oproperty :slice, GIMI::Resource::Slice
 
     belongs_to :project, OMF::SFA::Resource::Project, :required => false
 
@@ -19,6 +20,7 @@ module GIMI::Resource
 
   end # classs
 end # module
+
 
 # Extend Project with Experiments
 module OMF::SFA::Resource
