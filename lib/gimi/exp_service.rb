@@ -12,7 +12,7 @@ if __FILE__ == $0
 
   opts = {
     :app_name => 'exp_server',
-    :port => 8002,
+    :port => 8023,
     # :am => {
       # :manager => lambda { OMF::SFA::AM::AMManager.new(OMF::SFA::AM::AMScheduler.new) }
     # },
