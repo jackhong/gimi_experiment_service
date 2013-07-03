@@ -18,6 +18,12 @@ module GIMI::Resource
       h
     end
 
+    def to_hash_brief(opts = {})
+      h = super
+      h[:iticket] = self.iticket.to_hash if self.iticket
+      h[:slice] = self.slice.to_hash if self.slice
+      h
+    end
   end # classs
 end # module
 
